@@ -6,12 +6,12 @@
 	// https://github.com/tmpvar/jsdom
 	npm install jsdom --save
 */
-/*global $, localStorage, angular, alert, document, console, confirrequire */
+/*global $, localStorage, angular, alert, document, console, require */
 /*jshint unused:false */
 
-// Count all of the links from the Node.js build page
 var jsdom = require("jsdom").jsdom;
 
+// Count all of the links from the Node.js build page
 jsdom.env(
 	"http://nodejs.org/dist/", // This is where some HTML is fetched from
   ["http://code.jquery.com/jquery.js"], // We will include jQuery
