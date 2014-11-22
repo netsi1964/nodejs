@@ -14,18 +14,22 @@ function writeStringToFile(sPath, sString, fCallback) {
 // Visit documentation page for Dynamicweb CMS template tags and get array of tags
 function getTags(window, selector, tags) {
 	selector = (typeof selector !== "undefined") ? selector : "a.M0, .SL1, a[rel='5']";
-	tags = (typeof tags === "undefined") ? [] : tags;
+	var ttags = [];
 	window.$(selector).each(function () {
 		var tag = window.$(this).text();
-		console.log("Found "+tag);
-		tags.push(window.$.trim(tag.replace(/[<!--\@\,--\>]/ig, "")));
+		var sCleanedTag = window.$.trim(tag.replace(/[<!--\@\,--\>]/ig, ""));
+		var sTag = "|"+sCleanedTag+"|";
+		if (sAllTags.indexOf(sTag) === -1) {
+			sAllTags+=sTag;
+			ttags.push(sCleanedTag);
+		}
 	});
-	return tags;
+	return ttags;
 }
 
 function fetchTags(pages, tags, iPage, fFinished) {
 	var url = sHost + pages[iPage];
-	console.info("Fetching tags from: " + url);
+	// console.info("Fetching tags from: " + url);
 	jsdom.env(
 		url, // This is where some HTML is fetched from
   		["http://code.jquery.com/jquery.js"], // We will include jQuery
@@ -36,6 +40,7 @@ function fetchTags(pages, tags, iPage, fFinished) {
 					"value": tag,
 					"data": tag
 				});
+				console.log("Adding no " + tags.length + " " + tag);
 			});
 			iPage++;
 			if (iPage < pages.length) {
@@ -589,12 +594,13 @@ var pages = ['/TemplateTags/Dynamicweb-template-tags/General-tags.aspx',
   '/TemplateTags/Dynamicweb-template-tags/General-tags/Global-template-tags/GlobalOMC-Visitor-SecondaryProfile-Reference.aspx',
   '/TemplateTags/Dynamicweb-template-tags/General-tags/Global-template-tags/Navigation-Render().aspx'];
 var tags = [];
+var sAllTags = "";
 var iPage = 0;
 var sHost = "http://templates.dynamicweb.com";
 var dStart = new Date();
 fetchTags(pages, tags, iPage, function () {
 	writeStringToFile("/Users/stenhougaard/Dropbox/Public/dynamicwebTags.js", "var tags = " + JSON.stringify(tags), function (info) {
 		console.log(info);
-		console.log("after "+((new Date()-dStart)/1000)+" seconds");
+		console.log("after " + ((new Date() - dStart) / 1000) + " seconds");
 	});
 });
