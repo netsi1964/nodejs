@@ -1,5 +1,4 @@
-# nodejs
-======
+# nodejs by Sten Hougaard
 
 ## A collection of content related to NodeJS
 
