@@ -79,14 +79,86 @@ var pages = ['/TemplateTags/Dynamicweb-template-tags/General-tags.aspx',
   '/TemplateTags/Dynamicweb-template-tags/Module-tags/Workflow.aspx',
   '/TemplateTags/Dynamicweb-template-tags/Module-tags/Copy-of-Audit.aspx',
   '/TemplateTags/Dynamicweb-template-tags/Related-documentation.aspx'];
+
+var pages = ["http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Product-Catalog.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Shopping-Cart.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Shopping-Cart-V2.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Customer-Center.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Extentions.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Product-Catalog/Product-list.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Product-Catalog/Product-list/Loops/Childgroups.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Product-Catalog/Product-list/Loops/CustomFieldList.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Product-Catalog/Product-list/Loops/CustomGroupFields.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Product-Catalog/Product-list/Loops/EcomProductList-Pages.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Product-Catalog/Product-list/Loops/EcomSearch-Filters.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Product-Catalog/Product-list/Loops/ProductGroups.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Product-Catalog/Product-list/Loops/Products.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Product-Catalog/Product-list/Loops/Subgroups.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Product-Catalog/Product-list/Loops/Taxes.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Product-Catalog/Product-detail.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Product-Catalog/Product-detail/Loops/AssociatedGroups.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Product-Catalog/Product-detail/Loops/BOMConfigurators.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Product-Catalog/Product-detail/Loops/BOMProducts.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Product-Catalog/Product-detail/Loops/CustomFieldList.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Product-Catalog/Product-detail/Loops/CustomFields.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Product-Catalog/Product-detail/Loops/Details.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Product-Catalog/Product-detail/Loops/GroupFields.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Product-Catalog/Product-detail/Loops/OrderContexts.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Product-Catalog/Product-detail/Loops/ProductCategories.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Product-Catalog/Product-detail/Loops/ProductDiscounts.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Product-Catalog/Product-detail/Loops/ProductGroups.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Product-Catalog/Product-detail/Loops/Product-OrderLineFields.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Product-Catalog/Product-detail/Loops/ProductRelatedGroups.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Product-Catalog/Product-detail/Loops/Units.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Product-Catalog/Product-detail/Loops/VariantCombinations.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Product-Catalog/Product-detail/Loops/VariantGroups.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Product-Catalog/Product-detail/Loops/Comments.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Product-Catalog/Product-detail/Loops/eComRelated-MostPopularProducts.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tag…oduct-Catalog/Product-detail/Loops/eComRelated-WhatAboutTheseProducts.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tag…t-Catalog/Product-detail/Loops/eComRelated-CustomersWhoSawThisAlsoSaw.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tag…Product-detail/Loops/eComRelated-CustomersWhoBoughtThisItemAlsoBought.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tag…uct-Catalog/Product-detail/Loops/eComRelated-YouHaveSeenTheseProducts.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Product-Catalog/Product-detail/Loops/Taxes.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Product-Catalog/Search.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Shopping-Cart/Order/Cart.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Shopping-Cart/Order/Cart/Gateway.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Shopping-Cart/Order/Cart/Loops/Countries.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Shopping-Cart/Order/Cart/Loops/Orderlines.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Shopping-Cart/Order/Cart/Loops/Paymethods.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Shopping-Cart/Order/Cart/Loops/Shippingmethods.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Shopping-Cart/Order/Cart/Loops/ValidationErrors.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Shopping-Cart-V2/Order/Cart.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Shopping-Cart-V2/Order/Cart/Loops/AddressValidators.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Shopping-Cart-V2/Order/Cart/Loops/Countries.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Shopping-Cart-V2/Order/Cart/Loops/eComRelated-SavedForLater.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Shopping-Cart-V2/Order/Cart/Loops/MissingProducts.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Shopping-Cart-V2/Order/Cart/Loops/Orderlines.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Shopping-Cart-V2/Order/Cart/Loops/Paymethods.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Shopping-Cart-V2/Order/Cart/Loops/StepButtons.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Shopping-Cart-V2/Order/Cart/Loops/Shippingmethods.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Shopping-Cart-V2/Order/Cart/Loops/ShippingTaxes.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Shopping-Cart-V2/Order/Cart/Loops/ShippingTaxesGrouped.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Shopping-Cart-V2/Order/Cart/Loops/StepButtons-1.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Shopping-Cart-V2/Order/Cart/Loops/TaxProviderErrors.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Shopping-Cart-V2/Order/Cart/Loops/ValidationErrors.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Shopping-Cart-V2/CheckOutHandler.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Customer-Center/Menu-layout.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Customer-Center/Order-list.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Customer-Center/Order-details.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Customer-Center/Order-search.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Customer-Center/Favorites-list.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Customer-Center/Specify-e-mail.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Customer-Center/Order-e-mail.aspx",
+"http://templates.dynamicweb.com/eCommerce/Dynamicweb-eCommerce-template-tags/Product-Catalog/Product-detail/ProductSheetURL.aspx"];
+
 var links = [];
 var linkContainerSelector = "#leftmenu a";
-var iPage = pages.length-1;
+var iPage = pages.length - 1;
 var sRoot = "http://templates.dynamicweb.dk";
 
 // Count all of the links from the Node.js build page
 function getLinks(pages, links, fCallback) {
-	var sURL = sRoot+pages[iPage];
+	var sURL = sRoot + pages[iPage];
 	console.info("You asked me to fetch: " + sURL);
 	jsdom.env(
 		sURL, ["http://code.jquery.com/jquery.js"], // We will include jQuery

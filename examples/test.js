@@ -1,65 +1,3 @@
-/*global $, localStorage, angular, alert, document, console, confirm, require */
-/*jshint unused:false */
-
-var jsdom = require("jsdom").jsdom;
-var fs = require('fs');
-
-function writeStringToFile(sPath, sString, fCallback) {
-	fs.writeFile(sPath, sString, function (err) {
-		var info = (err) ? err : "The file \"" + sPath + "\" was saved!";
-		fCallback.call(this, info);
-	});
-}
-
-// Visit documentation page for Dynamicweb CMS template tags and get array of tags
-function getTags(window, selector, tags) {
-	selector = (typeof selector !== "undefined") ? selector : "a.M0, .SL1, a[rel='5']";
-	var ttags = [];
-	window.$(selector).each(function () {
-		var tag = window.$(this).text();
-		var sCleanedTag = window.$.trim(tag.replace(/[<!--\@\,--\>]/ig, ""));
-		var sTag = "|" + sCleanedTag + "|";
-		if (sAllTags.indexOf(sTag) === -1) {
-			sAllTags += sTag;
-			ttags.push(sCleanedTag);
-		}
-	});
-	return ttags;
-}
-
-function getContext(url) {
-	var s = url.split("template-tags/");
-	var context = s[s.length-1].split("/").join(" > ").replace(".aspx","").replace(/-/g, " ");
-	return context;
-}
-
-function fetchTags(pages, tags, iPage, fFinished) {
-	var url = sHost + pages[iPage];
-	// console.info("Fetching tags from: " + url);
-	jsdom.env(
-		url, // This is where some HTML is fetched from
-  		["http://code.jquery.com/jquery.js"], // We will include jQuery
-		function (errors, window) {
-			var temp = getTags(window); // Find Dynamicweb tags on page
-			var context = getContext(url);
-			[].forEach.call(temp, function convert(tag) {
-				tags.push({
-					"value": tag,
-					"data": tag,
-					"context": context
-				});
-				console.log("Adding no " + tags.length + " " + tag+ " ("+context+")");
-			});
-			iPage++;
-			if (iPage < pages.length) {
-				fetchTags(pages, tags, iPage, fFinished);
-			} else {
-				fFinished.call();
-			}
-		}
-	);
-}
-
 var pages = ['/TemplateTags/Dynamicweb-template-tags/General-tags.aspx',
   '/TemplateTags/Dynamicweb-template-tags/General-tags/DwTemplateTags.aspx',
   '/TemplateTags/Dynamicweb-template-tags/General-tags/Date/time-tag-extensions.aspx',
@@ -671,14 +609,14 @@ var pages = ['/TemplateTags/Dynamicweb-template-tags/General-tags.aspx',
 "/eCommerce/Dynamicweb-eCommerce-template-tags/Customer-Center/Specify-e-mail.aspx",
 "/eCommerce/Dynamicweb-eCommerce-template-tags/Customer-Center/Order-e-mail.aspx",
 "/eCommerce/Dynamicweb-eCommerce-template-tags/Product-Catalog/Product-detail/ProductSheetURL.aspx"];
-var tags = [];
-var sAllTags = "";
-var iPage = 0;
-var sHost = "http://templates.dynamicweb.com";
-var dStart = new Date();
-fetchTags(pages, tags, iPage, function () {
-	writeStringToFile("/Users/stenhougaard/Dropbox/Public/dynamicwebTags.js", "var tags = " + JSON.stringify(tags), function (info) {
-		console.log(info);
-		console.log("after " + ((new Date() - dStart) / 1000) + " seconds");
-	});
-});
+
+function getContext(url) {
+	var s = url.split("template-tags/");
+	var context = s[s.length-1].split("/").join(" > ").replace(".aspx","").replace(/-/g, " ");
+	return context;
+}
+
+for(var i=0; i<pages.length; i++) {
+	var url = pages[i];
+	console.log(getContext(url));
+}
